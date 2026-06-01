@@ -11,3 +11,27 @@ class Solution:
             d=min(cost)
             final=c-d
         return (final)
+
+##2
+
+class Solution:
+    def minimumCost(self, cost: List[int]) -> int:
+        b=[]
+        a=min(cost)
+        total=0
+        if 2>=len(cost):
+            return sum(cost)
+        #elif len(cost)%3==0:
+        cost.sort(reverse=True)
+        i=0
+        while i<len(cost): #0
+            if i< len(cost):
+                total += cost[i]
+                if i+1<len(cost):
+                    total+=cost[i+1] #0+1
+                    i+=3   #0+3
+        return total
+
+            
+
+        
